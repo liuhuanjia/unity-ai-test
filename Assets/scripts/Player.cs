@@ -24,8 +24,9 @@ public class Player : MonoBehaviour{
         //创建一个射线碰撞物体
         RaycastHit hitt = new RaycastHit();
         //打出ray,碰撞结果保存在hitt中
+
         if(Physics.Raycast(ray, out hitt, 100, LayerMask.GetMask("Ground")))
-        //打印是否碰撞
+        //打印是否碰撞           hitinfo(out RaycastHit)
         Debug.Log("hitt", hitt.transform);      //值得试一试
         if (hitt.transform != null)
         {
